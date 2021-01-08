@@ -87,6 +87,7 @@ const SegmentedControl = ({
         <SegmentsSeparators
           values={values.length}
           selectedIndex={selectedIndex}
+          colorScheme={colorScheme}
         />
       )}
       <View style={styles.segmentsContainer}>
