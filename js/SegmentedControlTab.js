@@ -12,7 +12,6 @@ import {
   Text,
   TouchableOpacity,
   View,
-  useColorScheme,
 } from 'react-native';
 
 import type {FontStyle} from './types';
@@ -43,8 +42,7 @@ export const SegmentedControlTab = ({
   activeFontStyle = {},
   appearance,
 }: Props): React.Node => {
-  const colorSchemeHook = useColorScheme();
-  const colorScheme = appearance || colorSchemeHook;
+  const colorScheme = appearance || 'light';
   const {color: textColor, fontSize, fontFamily, fontWeight} = fontStyle;
 
   const {
