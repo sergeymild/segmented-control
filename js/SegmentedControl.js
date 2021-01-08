@@ -12,7 +12,6 @@ import {
   I18nManager,
   StyleSheet,
   View,
-  useColorScheme,
 } from 'react-native';
 
 import type {SegmentedControlProps} from './types';
@@ -36,8 +35,7 @@ const SegmentedControl = ({
   activeFontStyle,
   appearance,
 }: SegmentedControlProps): React.Node => {
-  const colorSchemeHook = useColorScheme();
-  const colorScheme = appearance || colorSchemeHook;
+  const colorScheme = appearance || 'light';
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
 
